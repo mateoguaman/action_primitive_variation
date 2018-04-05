@@ -8,13 +8,7 @@ project(action_primitive_variation)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  baxter_core_msgs
-  baxter_gazebo
-  baxter_interface
-  baxter_msgs
-  baxter_ros
-  baxter_tools
-  rospack
+  roscpp
   rospy
 )
 
@@ -75,7 +69,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   baxter_core_msgs#   baxter_msgs
+#   std_msgs  # Or other packages containing msgs
 # )
 
 ################################################
@@ -110,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES action_primitive_variation
-#  CATKIN_DEPENDS baxter_core_msgs baxter_gazebo baxter_interface baxter_msgs baxter_ros baxter_tools rospack rospy
+#  CATKIN_DEPENDS roscpp rospy
 #  DEPENDS system_lib
 )
 
