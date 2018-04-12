@@ -266,7 +266,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f baxter_common/baxter_common/CMakeFiles/_catkin_empty_exported_target.dir/build.make baxter_common/baxter_common/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_common/CMakeFiles/_catkin_empty_exported_target.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_common/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
@@ -279,151 +279,8 @@ baxter_maintenance_msgs_genpy: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_genpy/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genpy.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genpy.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genpy.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genpy.dir/build
 .PHONY : baxter_maintenance_msgs_genpy/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
-
-# Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus
-
-# Build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus
-
-# fast build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus.dir/build
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources
-
-# Build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources
-
-# fast build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources.dir/build
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named baxter_maintenance_msgs_generate_messages
-
-# Build rule for target.
-baxter_maintenance_msgs_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_maintenance_msgs_generate_messages
-.PHONY : baxter_maintenance_msgs_generate_messages
-
-# fast build rule for target.
-baxter_maintenance_msgs_generate_messages/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages.dir/build
-.PHONY : baxter_maintenance_msgs_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData
-
-# Build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData
-
-# fast build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData.dir/build
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
-
-# Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource
-
-# Build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource
-
-# fast build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource.dir/build
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource/fast
-
-#=============================================================================
-# Target rules for targets named baxter_maintenance_msgs_generate_messages_cpp
-
-# Build rule for target.
-baxter_maintenance_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_maintenance_msgs_generate_messages_cpp
-.PHONY : baxter_maintenance_msgs_generate_messages_cpp
-
-# fast build rule for target.
-baxter_maintenance_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_cpp.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_cpp.dir/build
-.PHONY : baxter_maintenance_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable
-
-# Build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable
-
-# fast build rule for target.
-_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable.dir/build
-.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named baxter_maintenance_msgs_gennodejs
@@ -435,21 +292,60 @@ baxter_maintenance_msgs_gennodejs: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_gennodejs/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gennodejs.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gennodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gennodejs.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gennodejs.dir/build
 .PHONY : baxter_maintenance_msgs_gennodejs/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
+# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData
 
 # Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
+_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData
 
 # fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData.dir/build
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData/fast
+
+#=============================================================================
+# Target rules for targets named baxter_maintenance_msgs_generate_messages
+
+# Build rule for target.
+baxter_maintenance_msgs_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_maintenance_msgs_generate_messages
+.PHONY : baxter_maintenance_msgs_generate_messages
+
+# fast build rule for target.
+baxter_maintenance_msgs_generate_messages/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages.dir/build
+.PHONY : baxter_maintenance_msgs_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable
+
+# Build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable
+
+# fast build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareEnable.dir/build
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable/fast
 
 #=============================================================================
 # Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_TareData
@@ -461,7 +357,7 @@ _baxter_maintenance_msgs_generate_messages_check_deps_TareData: cmake_check_buil
 
 # fast build rule for target.
 _baxter_maintenance_msgs_generate_messages_check_deps_TareData/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareData.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareData.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareData.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_TareData.dir/build
 .PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_TareData/fast
 
 #=============================================================================
@@ -474,8 +370,112 @@ _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable: cmake_
 
 # fast build rule for target.
 _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable.dir/build
 .PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource
+
+# Build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource
+
+# fast build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource.dir/build
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource/fast
+
+#=============================================================================
+# Target rules for targets named baxter_maintenance_msgs_generate_messages_cpp
+
+# Build rule for target.
+baxter_maintenance_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_maintenance_msgs_generate_messages_cpp
+.PHONY : baxter_maintenance_msgs_generate_messages_cpp
+
+# fast build rule for target.
+baxter_maintenance_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_cpp.dir/build
+.PHONY : baxter_maintenance_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources
+
+# Build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources
+
+# fast build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources.dir/build
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus
+
+# Build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus
+
+# fast build rule for target.
+_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/_baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus.dir/build
+.PHONY : _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus/fast
 
 #=============================================================================
 # Target rules for targets named baxter_maintenance_msgs_generate_messages_eus
@@ -487,7 +487,7 @@ baxter_maintenance_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_eus.dir/build
 .PHONY : baxter_maintenance_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -500,7 +500,7 @@ baxter_maintenance_msgs_genlisp: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_genlisp/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genlisp.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genlisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genlisp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_genlisp.dir/build
 .PHONY : baxter_maintenance_msgs_genlisp/fast
 
 #=============================================================================
@@ -513,7 +513,7 @@ baxter_maintenance_msgs_geneus: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_geneus/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_geneus.dir/build
 .PHONY : baxter_maintenance_msgs_geneus/fast
 
 #=============================================================================
@@ -526,7 +526,7 @@ baxter_maintenance_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_lisp.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_lisp.dir/build
 .PHONY : baxter_maintenance_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -539,7 +539,7 @@ baxter_maintenance_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_nodejs.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_nodejs.dir/build
 .PHONY : baxter_maintenance_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -552,7 +552,7 @@ baxter_maintenance_msgs_gencpp: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_gencpp/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/build
 .PHONY : baxter_maintenance_msgs_gencpp/fast
 
 #=============================================================================
@@ -565,7 +565,7 @@ baxter_maintenance_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 baxter_maintenance_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_py.dir/build.make baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_py.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_generate_messages_py.dir/build
 .PHONY : baxter_maintenance_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -578,7 +578,7 @@ baxter_core_msgs_gennodejs: cmake_check_build_system
 
 # fast build rule for target.
 baxter_core_msgs_gennodejs/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gennodejs.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gennodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gennodejs.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gennodejs.dir/build
 .PHONY : baxter_core_msgs_gennodejs/fast
 
 #=============================================================================
@@ -591,346 +591,34 @@ baxter_core_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 baxter_core_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_nodejs.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_nodejs.dir/build
 .PHONY : baxter_core_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates
 
 # Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand
+_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates
 
 # fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand/fast
+_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates/fast
 
 #=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK
 
 # Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties
+_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK
 
 # fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_NavigatorStates
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_NavigatorStates: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_NavigatorStates
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorStates
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_NavigatorStates/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorStates.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorStates.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorStates/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_ListCameras
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_ListCameras: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_ListCameras
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_ListCameras
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_ListCameras/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_ListCameras.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_ListCameras.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_ListCameras/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AssemblyStates
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AssemblyStates: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AssemblyStates
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AssemblyStates
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AssemblyStates/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyStates.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyStates.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AssemblyStates/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndpointStates
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndpointStates: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndpointStates
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointStates
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndpointStates/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointStates.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointStates.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointStates/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_OpenCamera
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_OpenCamera: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_OpenCamera
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_OpenCamera
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_OpenCamera/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_OpenCamera.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_OpenCamera.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_OpenCamera/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_JointCommand
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_JointCommand: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_JointCommand
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_JointCommand
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_JointCommand/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_JointCommand.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_JointCommand.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_JointCommand/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState/fast
-
-#=============================================================================
-# Target rules for targets named baxter_core_msgs_generate_messages_py
-
-# Build rule for target.
-baxter_core_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages_py
-.PHONY : baxter_core_msgs_generate_messages_py
-
-# fast build rule for target.
-baxter_core_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_py.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_py.dir/build
-.PHONY : baxter_core_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_CameraSettings
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_CameraSettings: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_CameraSettings
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_CameraSettings
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_CameraSettings/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraSettings.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraSettings.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_CameraSettings/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AnalogIOState
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AnalogIOState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AnalogIOState
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOState
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AnalogIOState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOState.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOState/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand/fast
-
-#=============================================================================
-# Target rules for targets named baxter_core_msgs_genpy
-
-# Build rule for target.
-baxter_core_msgs_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_genpy
-.PHONY : baxter_core_msgs_genpy
-
-# fast build rule for target.
-baxter_core_msgs_genpy/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genpy.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genpy.dir/build
-.PHONY : baxter_core_msgs_genpy/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndpointState
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndpointState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndpointState
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointState
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndpointState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointState.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointState/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_NavigatorState
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_NavigatorState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_NavigatorState
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorState
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_NavigatorState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorState.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorState/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_lisp
-
-# Build rule for target.
-geometry_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_eus
-
-# Build rule for target.
-geometry_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_cpp
-
-# Build rule for target.
-geometry_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_nodejs
-
-# Build rule for target.
-sensor_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named baxter_core_msgs_gencpp
-
-# Build rule for target.
-baxter_core_msgs_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_gencpp
-.PHONY : baxter_core_msgs_gencpp
-
-# fast build rule for target.
-baxter_core_msgs_gencpp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gencpp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gencpp.dir/build
-.PHONY : baxter_core_msgs_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
+_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK/fast
 
 #=============================================================================
 # Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AssemblyState
@@ -942,7 +630,7 @@ _baxter_core_msgs_generate_messages_check_deps_AssemblyState: cmake_check_build_
 
 # fast build rule for target.
 _baxter_core_msgs_generate_messages_check_deps_AssemblyState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyState.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyState.dir/build
 .PHONY : _baxter_core_msgs_generate_messages_check_deps_AssemblyState/fast
 
 #=============================================================================
@@ -955,164 +643,99 @@ baxter_core_msgs_geneus: cmake_check_build_system
 
 # fast build rule for target.
 baxter_core_msgs_geneus/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_geneus.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_geneus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_geneus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_geneus.dir/build
 .PHONY : baxter_core_msgs_geneus/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_eus
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AnalogIOState
 
 # Build rule for target.
-sensor_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
-.PHONY : sensor_msgs_generate_messages_eus
+_baxter_core_msgs_generate_messages_check_deps_AnalogIOState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AnalogIOState
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOState
 
 # fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
+_baxter_core_msgs_generate_messages_check_deps_AnalogIOState/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOState.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOState/fast
 
 #=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndEffectorState
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand
 
 # Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndEffectorState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndEffectorState
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorState
+_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand
 
 # fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_EndEffectorState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorState.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorState/fast
+_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadPanCommand.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand/fast
 
 #=============================================================================
-# Target rules for targets named baxter_core_msgs_generate_messages_cpp
+# Target rules for targets named baxter_core_msgs_generate_messages_py
 
 # Build rule for target.
-baxter_core_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages_cpp
-.PHONY : baxter_core_msgs_generate_messages_cpp
+baxter_core_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages_py
+.PHONY : baxter_core_msgs_generate_messages_py
 
 # fast build rule for target.
-baxter_core_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_cpp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_cpp.dir/build
-.PHONY : baxter_core_msgs_generate_messages_cpp/fast
+baxter_core_msgs_generate_messages_py/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_py.dir/build
+.PHONY : baxter_core_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_CameraSettings
 
 # Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration
+_baxter_core_msgs_generate_messages_check_deps_CameraSettings: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_CameraSettings
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_CameraSettings
 
 # fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration/fast
+_baxter_core_msgs_generate_messages_check_deps_CameraSettings/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraSettings.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraSettings.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_CameraSettings/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties
 
 # Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
+_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties
 
 # fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
+_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_nodejs
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates
 
 # Build rule for target.
-geometry_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
-.PHONY : geometry_msgs_generate_messages_nodejs
+_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates
 
 # fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
+_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOStates.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates/fast
 
 #=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_OpenCamera
 
 # Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand
+_baxter_core_msgs_generate_messages_check_deps_OpenCamera: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_OpenCamera
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_OpenCamera
 
 # fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand/fast
-
-#=============================================================================
-# Target rules for targets named baxter_core_msgs_generate_messages_lisp
-
-# Build rule for target.
-baxter_core_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages_lisp
-.PHONY : baxter_core_msgs_generate_messages_lisp
-
-# fast build rule for target.
-baxter_core_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_lisp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_lisp.dir/build
-.PHONY : baxter_core_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named baxter_core_msgs_generate_messages
-
-# Build rule for target.
-baxter_core_msgs_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages
-.PHONY : baxter_core_msgs_generate_messages
-
-# fast build rule for target.
-baxter_core_msgs_generate_messages/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages.dir/build
-.PHONY : baxter_core_msgs_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SolvePositionIK.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates/fast
-
-#=============================================================================
-# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_DigitalIOState
-
-# Build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_DigitalIOState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_DigitalIOState
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOState
-
-# fast build rule for target.
-_baxter_core_msgs_generate_messages_check_deps_DigitalIOState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOState.dir/build
-.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOState/fast
+_baxter_core_msgs_generate_messages_check_deps_OpenCamera/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_OpenCamera.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_OpenCamera.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_OpenCamera/fast
 
 #=============================================================================
 # Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_CloseCamera
@@ -1124,7 +747,7 @@ _baxter_core_msgs_generate_messages_check_deps_CloseCamera: cmake_check_build_sy
 
 # fast build rule for target.
 _baxter_core_msgs_generate_messages_check_deps_CloseCamera/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CloseCamera.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CloseCamera.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CloseCamera.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CloseCamera.dir/build
 .PHONY : _baxter_core_msgs_generate_messages_check_deps_CloseCamera/fast
 
 #=============================================================================
@@ -1137,8 +760,255 @@ _baxter_core_msgs_generate_messages_check_deps_HeadState: cmake_check_build_syst
 
 # fast build rule for target.
 _baxter_core_msgs_generate_messages_check_deps_HeadState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadState.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_HeadState.dir/build
 .PHONY : _baxter_core_msgs_generate_messages_check_deps_HeadState/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_DigitalIOState
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_DigitalIOState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_DigitalIOState
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOState
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_DigitalIOState/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalIOState.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalIOState/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named baxter_core_msgs_gencpp
+
+# Build rule for target.
+baxter_core_msgs_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_gencpp
+.PHONY : baxter_core_msgs_gencpp
+
+# fast build rule for target.
+baxter_core_msgs_gencpp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gencpp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_gencpp.dir/build
+.PHONY : baxter_core_msgs_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_eus
+
+# Build rule for target.
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndEffectorState
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndEffectorState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndEffectorState
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorState
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndEffectorState/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndEffectorState.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndEffectorState/fast
+
+#=============================================================================
+# Target rules for targets named baxter_core_msgs_generate_messages_cpp
+
+# Build rule for target.
+baxter_core_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages_cpp
+.PHONY : baxter_core_msgs_generate_messages_cpp
+
+# fast build rule for target.
+baxter_core_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_cpp.dir/build
+.PHONY : baxter_core_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_URDFConfiguration.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_URDFConfiguration/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand/fast
+
+#=============================================================================
+# Target rules for targets named baxter_core_msgs_generate_messages_lisp
+
+# Build rule for target.
+baxter_core_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages_lisp
+.PHONY : baxter_core_msgs_generate_messages_lisp
+
+# fast build rule for target.
+baxter_core_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_lisp.dir/build
+.PHONY : baxter_core_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named baxter_core_msgs_generate_messages
+
+# Build rule for target.
+baxter_core_msgs_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_generate_messages
+.PHONY : baxter_core_msgs_generate_messages
+
+# fast build rule for target.
+baxter_core_msgs_generate_messages/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages.dir/build
+.PHONY : baxter_core_msgs_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_NavigatorState
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_NavigatorState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_NavigatorState
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorState
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_NavigatorState/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorState.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorState/fast
 
 #=============================================================================
 # Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus
@@ -1150,8 +1020,34 @@ _baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus: cmake_che
 
 # fast build rule for target.
 _baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus.dir/build
 .PHONY : _baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_JointCommand
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_JointCommand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_JointCommand
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_JointCommand
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_JointCommand/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_JointCommand.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_JointCommand.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_JointCommand/fast
 
 #=============================================================================
 # Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_SEAJointState
@@ -1163,8 +1059,86 @@ _baxter_core_msgs_generate_messages_check_deps_SEAJointState: cmake_check_build_
 
 # fast build rule for target.
 _baxter_core_msgs_generate_messages_check_deps_SEAJointState/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SEAJointState.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SEAJointState.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SEAJointState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_SEAJointState.dir/build
 .PHONY : _baxter_core_msgs_generate_messages_check_deps_SEAJointState/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndpointStates
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndpointStates: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndpointStates
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointStates
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndpointStates/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointStates.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointStates.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointStates/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AssemblyStates
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_AssemblyStates: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AssemblyStates
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AssemblyStates
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_AssemblyStates/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyStates.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AssemblyStates.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AssemblyStates/fast
+
+#=============================================================================
+# Target rules for targets named baxter_core_msgs_genpy
+
+# Build rule for target.
+baxter_core_msgs_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baxter_core_msgs_genpy
+.PHONY : baxter_core_msgs_genpy
+
+# fast build rule for target.
+baxter_core_msgs_genpy/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genpy.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genpy.dir/build
+.PHONY : baxter_core_msgs_genpy/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_EndpointState
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndpointState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_EndpointState
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointState
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_EndpointState/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointState.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointState.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_EndpointState/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_lisp
@@ -1176,7 +1150,7 @@ sensor_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1189,8 +1163,34 @@ _baxter_core_msgs_generate_messages_check_deps_CameraControl: cmake_check_build_
 
 # fast build rule for target.
 _baxter_core_msgs_generate_messages_check_deps_CameraControl/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraControl.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraControl.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraControl.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_CameraControl.dir/build
 .PHONY : _baxter_core_msgs_generate_messages_check_deps_CameraControl/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_ListCameras
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_ListCameras: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_ListCameras
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_ListCameras
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_ListCameras/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_ListCameras.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_ListCameras.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_ListCameras/fast
+
+#=============================================================================
+# Target rules for targets named _baxter_core_msgs_generate_messages_check_deps_NavigatorStates
+
+# Build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_NavigatorStates: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _baxter_core_msgs_generate_messages_check_deps_NavigatorStates
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorStates
+
+# fast build rule for target.
+_baxter_core_msgs_generate_messages_check_deps_NavigatorStates/fast:
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorStates.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_NavigatorStates.dir/build
+.PHONY : _baxter_core_msgs_generate_messages_check_deps_NavigatorStates/fast
 
 #=============================================================================
 # Target rules for targets named baxter_core_msgs_generate_messages_eus
@@ -1202,7 +1202,7 @@ baxter_core_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 baxter_core_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_eus.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_eus.dir/build
 .PHONY : baxter_core_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1215,7 +1215,7 @@ baxter_core_msgs_genlisp: cmake_check_build_system
 
 # fast build rule for target.
 baxter_core_msgs_genlisp/fast:
-	$(MAKE) -f baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genlisp.dir/build.make baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genlisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genlisp.dir/build.make non_sim_baxter_stuff/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genlisp.dir/build
 .PHONY : baxter_core_msgs_genlisp/fast
 
 #=============================================================================
@@ -1618,7 +1618,7 @@ dynamic_reconfigure_gencfg: cmake_check_build_system
 
 # fast build rule for target.
 dynamic_reconfigure_gencfg/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make baxter_interface/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 .PHONY : dynamic_reconfigure_gencfg/fast
 
 #=============================================================================
@@ -1631,7 +1631,7 @@ dynamic_reconfigure_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1644,7 +1644,7 @@ actionlib_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1657,7 +1657,7 @@ actionlib_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_generate_messages_py.dir/build.make baxter_interface/CMakeFiles/actionlib_generate_messages_py.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
 #=============================================================================
@@ -1670,7 +1670,7 @@ control_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 control_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make baxter_interface/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
 .PHONY : control_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1683,7 +1683,7 @@ actionlib_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1696,7 +1696,7 @@ actionlib_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make baxter_interface/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1709,7 +1709,7 @@ dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1722,7 +1722,7 @@ control_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 control_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make baxter_interface/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
 .PHONY : control_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1735,7 +1735,7 @@ dynamic_reconfigure_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_py/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 #=============================================================================
@@ -1748,7 +1748,7 @@ actionlib_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_generate_messages_eus.dir/build.make baxter_interface/CMakeFiles/actionlib_generate_messages_eus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
 
 #=============================================================================
@@ -1761,7 +1761,7 @@ actionlib_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make baxter_interface/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1774,7 +1774,7 @@ control_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 control_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/control_msgs_generate_messages_eus.dir/build.make baxter_interface/CMakeFiles/control_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_eus.dir/build
 .PHONY : control_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1787,7 +1787,7 @@ actionlib_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -1800,7 +1800,7 @@ actionlib_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1813,7 +1813,7 @@ actionlib_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make baxter_interface/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1826,7 +1826,7 @@ control_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 control_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build.make baxter_interface/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build
 .PHONY : control_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1839,7 +1839,7 @@ baxter_interface_gencfg: cmake_check_build_system
 
 # fast build rule for target.
 baxter_interface_gencfg/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/baxter_interface_gencfg.dir/build.make baxter_interface/CMakeFiles/baxter_interface_gencfg.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/baxter_interface_gencfg.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/baxter_interface_gencfg.dir/build
 .PHONY : baxter_interface_gencfg/fast
 
 #=============================================================================
@@ -1852,7 +1852,7 @@ control_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 control_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/control_msgs_generate_messages_py.dir/build.make baxter_interface/CMakeFiles/control_msgs_generate_messages_py.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/control_msgs_generate_messages_py.dir/build
 .PHONY : control_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -1865,7 +1865,7 @@ trajectory_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
 .PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1878,7 +1878,7 @@ trajectory_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
 .PHONY : trajectory_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1891,7 +1891,7 @@ trajectory_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1904,7 +1904,7 @@ trajectory_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1917,7 +1917,7 @@ dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_cpp/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1930,7 +1930,7 @@ actionlib_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_eus/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1943,7 +1943,7 @@ trajectory_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_py/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -1956,7 +1956,7 @@ dynamic_reconfigure_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_eus/fast:
-	$(MAKE) -f baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make non_sim_baxter_stuff/baxter_interface/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 #=============================================================================
@@ -2450,7 +2450,7 @@ baxter_examples_xacro_generated_to_devel_space_: cmake_check_build_system
 
 # fast build rule for target.
 baxter_examples_xacro_generated_to_devel_space_/fast:
-	$(MAKE) -f baxter_examples/CMakeFiles/baxter_examples_xacro_generated_to_devel_space_.dir/build.make baxter_examples/CMakeFiles/baxter_examples_xacro_generated_to_devel_space_.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_examples/CMakeFiles/baxter_examples_xacro_generated_to_devel_space_.dir/build.make non_sim_baxter_stuff/baxter_examples/CMakeFiles/baxter_examples_xacro_generated_to_devel_space_.dir/build
 .PHONY : baxter_examples_xacro_generated_to_devel_space_/fast
 
 #=============================================================================
@@ -2463,7 +2463,7 @@ baxter_examples_gencfg: cmake_check_build_system
 
 # fast build rule for target.
 baxter_examples_gencfg/fast:
-	$(MAKE) -f baxter_examples/CMakeFiles/baxter_examples_gencfg.dir/build.make baxter_examples/CMakeFiles/baxter_examples_gencfg.dir/build
+	$(MAKE) -f non_sim_baxter_stuff/baxter_examples/CMakeFiles/baxter_examples_gencfg.dir/build.make non_sim_baxter_stuff/baxter_examples/CMakeFiles/baxter_examples_gencfg.dir/build
 .PHONY : baxter_examples_gencfg/fast
 
 # Help Target
@@ -2488,21 +2488,21 @@ help:
 	@echo "... gtest_main"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... baxter_maintenance_msgs_genpy"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus"
-	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... baxter_maintenance_msgs_generate_messages"
+	@echo "... baxter_maintenance_msgs_gennodejs"
 	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmData"
+	@echo "... baxter_maintenance_msgs_generate_messages"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable"
+	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_TareData"
+	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSource"
 	@echo "... baxter_maintenance_msgs_generate_messages_cpp"
-	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_TareEnable"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... baxter_maintenance_msgs_gennodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_UpdateSources"
 	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_TareData"
-	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_CalibrateArmEnable"
+	@echo "... _baxter_maintenance_msgs_generate_messages_check_deps_UpdateStatus"
 	@echo "... baxter_maintenance_msgs_generate_messages_eus"
 	@echo "... baxter_maintenance_msgs_genlisp"
 	@echo "... baxter_maintenance_msgs_geneus"
@@ -2512,24 +2512,20 @@ help:
 	@echo "... baxter_maintenance_msgs_generate_messages_py"
 	@echo "... baxter_core_msgs_gennodejs"
 	@echo "... baxter_core_msgs_generate_messages_nodejs"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_NavigatorStates"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_ListCameras"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_AssemblyStates"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndpointStates"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_OpenCamera"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_JointCommand"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState"
-	@echo "... baxter_core_msgs_generate_messages_py"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_CameraSettings"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_AssemblyState"
+	@echo "... baxter_core_msgs_geneus"
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_AnalogIOState"
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_HeadPanCommand"
-	@echo "... baxter_core_msgs_genpy"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndpointState"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_NavigatorState"
+	@echo "... baxter_core_msgs_generate_messages_py"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_CameraSettings"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndEffectorProperties"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_DigitalIOStates"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_OpenCamera"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_CloseCamera"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_HeadState"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_DigitalIOState"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_cpp"
@@ -2538,8 +2534,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndEffectorCommand"
 	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_AssemblyState"
-	@echo "... baxter_core_msgs_geneus"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndEffectorState"
 	@echo "... baxter_core_msgs_generate_messages_cpp"
@@ -2549,15 +2543,21 @@ help:
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_DigitalOutputCommand"
 	@echo "... baxter_core_msgs_generate_messages_lisp"
 	@echo "... baxter_core_msgs_generate_messages"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_SolvePositionIK"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_AnalogIOStates"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_DigitalIOState"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_CloseCamera"
-	@echo "... _baxter_core_msgs_generate_messages_check_deps_HeadState"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_NavigatorState"
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_RobustControllerStatus"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_CollisionAvoidanceState"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_JointCommand"
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_SEAJointState"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndpointStates"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_CollisionDetectionState"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_AssemblyStates"
+	@echo "... baxter_core_msgs_genpy"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_EndpointState"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_AnalogOutputCommand"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... _baxter_core_msgs_generate_messages_check_deps_CameraControl"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_ListCameras"
+	@echo "... _baxter_core_msgs_generate_messages_check_deps_NavigatorStates"
 	@echo "... baxter_core_msgs_generate_messages_eus"
 	@echo "... baxter_core_msgs_genlisp"
 	@echo "... push_button_server"
