@@ -117,6 +117,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/evana/apv_ws/build/gtest/cmake_install.cmake")
+  include("/home/evana/apv_ws/build/action_primitive_variation/cmake_install.cmake")
+  include("/home/evana/apv_ws/build/baxter_sim/cmake_install.cmake")
 
 endif()
 

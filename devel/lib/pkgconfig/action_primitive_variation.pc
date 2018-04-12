@@ -1,0 +1,8 @@
+prefix=/home/evana/apv_ws/devel
+
+Name: action_primitive_variation
+Description: Description of action_primitive_variation
+Version: 0.0.0
+Cflags: -I/home/evana/apv_ws/devel/include
+Libs: -L/home/evana/apv_ws/devel/lib 
+Requires: 
