@@ -250,6 +250,7 @@ def main():
                              'left_e1': 1.9400238130755056,
                              'left_s0': -0.08000397926829805,
                              'left_s1': -0.9999781166910306}
+    
     pnp = PickAndPlace(limb, hover_distance)
     # An orientation for gripper fingers to be overhead and parallel to the obj
     overhead_orientation = Quaternion(

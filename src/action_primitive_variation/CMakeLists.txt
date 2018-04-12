@@ -33,7 +33,3 @@ add_dependencies(push_button_server action_primitive_variation_gencpp)
 add_executable(push_button_client src/push_button_client.cpp)
 target_link_libraries(push_button_client ${catkin_LIBRARIES})
 add_dependencies(push_button_client action_primitive_variation_gencpp)
-
-add_executable(baxter_gazebo_ros_control_plugin src/baxter_gazebo_ros_control_plugin.cpp)
-target_link_libraries(baxter_gazebo_ros_control_plugin ${catkin_LIBRARIES})
-add_dependencies(baxter_gazebo_ros_control_plugin action_primitive_variation_gencpp)

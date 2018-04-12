@@ -111,17 +111,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -132,6 +121,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -181,21 +181,6 @@ push_button_server/fast:
 .PHONY : push_button_server/fast
 
 # Convenience name for target.
-action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/rule
-
-# Convenience name for target.
-baxter_gazebo_ros_control_plugin: action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/rule
-
-.PHONY : baxter_gazebo_ros_control_plugin
-
-# fast build rule for target.
-baxter_gazebo_ros_control_plugin/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/build.make action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/build
-.PHONY : baxter_gazebo_ros_control_plugin/fast
-
-# Convenience name for target.
 action_primitive_variation/CMakeFiles/action_primitive_variation_genpy.dir/rule:
 	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_genpy.dir/rule
 .PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_genpy.dir/rule
@@ -224,111 +209,6 @@ action_primitive_variation_generate_messages_py: action_primitive_variation/CMak
 action_primitive_variation_generate_messages_py/fast:
 	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_py.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_py.dir/build
 .PHONY : action_primitive_variation_generate_messages_py/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule
-
-# Convenience name for target.
-action_primitive_variation_gennodejs: action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule
-
-.PHONY : action_primitive_variation_gennodejs
-
-# fast build rule for target.
-action_primitive_variation_gennodejs/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/build
-.PHONY : action_primitive_variation_gennodejs/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-action_primitive_variation_generate_messages_nodejs: action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule
-
-.PHONY : action_primitive_variation_generate_messages_nodejs
-
-# fast build rule for target.
-action_primitive_variation_generate_messages_nodejs/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/build
-.PHONY : action_primitive_variation_generate_messages_nodejs/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/talker.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/talker.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/talker.dir/rule
-
-# Convenience name for target.
-talker: action_primitive_variation/CMakeFiles/talker.dir/rule
-
-.PHONY : talker
-
-# fast build rule for target.
-talker/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/talker.dir/build.make action_primitive_variation/CMakeFiles/talker.dir/build
-.PHONY : talker/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule
-
-# Convenience name for target.
-action_primitive_variation_genlisp: action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule
-
-.PHONY : action_primitive_variation_genlisp
-
-# fast build rule for target.
-action_primitive_variation_genlisp/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/build
-.PHONY : action_primitive_variation_genlisp/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-action_primitive_variation_generate_messages_lisp: action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule
-
-.PHONY : action_primitive_variation_generate_messages_lisp
-
-# fast build rule for target.
-action_primitive_variation_generate_messages_lisp/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/build
-.PHONY : action_primitive_variation_generate_messages_lisp/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule
-
-# Convenience name for target.
-action_primitive_variation_geneus: action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule
-
-.PHONY : action_primitive_variation_geneus
-
-# fast build rule for target.
-action_primitive_variation_geneus/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/build
-.PHONY : action_primitive_variation_geneus/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: action_primitive_variation/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/std_msgs_generate_messages_py.dir/build.make action_primitive_variation/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 action_primitive_variation/CMakeFiles/action_primitive_variation_gencpp.dir/rule:
@@ -481,19 +361,19 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
-action_primitive_variation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_nodejs: action_primitive_variation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+roscpp_generate_messages_lisp: action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
-.PHONY : std_msgs_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_lisp
 
 # fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make action_primitive_variation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+roscpp_generate_messages_lisp/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_cpp.dir/rule:
@@ -511,49 +391,19 @@ action_primitive_variation_generate_messages_cpp/fast:
 .PHONY : action_primitive_variation_generate_messages_cpp/fast
 
 # Convenience name for target.
-action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_lisp: action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+action_primitive_variation_generate_messages_nodejs: action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/rule
 
-.PHONY : roscpp_generate_messages_lisp
+.PHONY : action_primitive_variation_generate_messages_nodejs
 
 # fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make action_primitive_variation/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: action_primitive_variation/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make action_primitive_variation/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: action_primitive_variation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make action_primitive_variation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
+action_primitive_variation_generate_messages_nodejs/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_nodejs.dir/build
+.PHONY : action_primitive_variation_generate_messages_nodejs/fast
 
 # Convenience name for target.
 action_primitive_variation/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
@@ -571,21 +421,6 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-action_primitive_variation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: action_primitive_variation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make action_primitive_variation/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages.dir/rule:
 	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages.dir/rule
 .PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages.dir/rule
@@ -599,36 +434,6 @@ action_primitive_variation_generate_messages: action_primitive_variation/CMakeFi
 action_primitive_variation_generate_messages/fast:
 	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages.dir/build
 .PHONY : action_primitive_variation_generate_messages/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-action_primitive_variation_generate_messages_eus: action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule
-
-.PHONY : action_primitive_variation_generate_messages_eus
-
-# fast build rule for target.
-action_primitive_variation_generate_messages_eus/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/build
-.PHONY : action_primitive_variation_generate_messages_eus/fast
-
-# Convenience name for target.
-action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule:
-	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule
-.PHONY : action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule
-
-# Convenience name for target.
-_action_primitive_variation_generate_messages_check_deps_PushButton: action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule
-
-.PHONY : _action_primitive_variation_generate_messages_check_deps_PushButton
-
-# fast build rule for target.
-_action_primitive_variation_generate_messages_check_deps_PushButton/fast:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/build.make action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/build
-.PHONY : _action_primitive_variation_generate_messages_check_deps_PushButton/fast
 
 # Convenience name for target.
 action_primitive_variation/CMakeFiles/push_button_client.dir/rule:
@@ -675,32 +480,110 @@ _action_primitive_variation_generate_messages_check_deps_MoveArm/fast:
 	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_MoveArm.dir/build.make action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_MoveArm.dir/build
 .PHONY : _action_primitive_variation_generate_messages_check_deps_MoveArm/fast
 
-src/baxter_gazebo_ros_control_plugin.o: src/baxter_gazebo_ros_control_plugin.cpp.o
+# Convenience name for target.
+action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule
 
-.PHONY : src/baxter_gazebo_ros_control_plugin.o
+# Convenience name for target.
+_action_primitive_variation_generate_messages_check_deps_PushButton: action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/rule
 
-# target to build an object file
-src/baxter_gazebo_ros_control_plugin.cpp.o:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/build.make action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/src/baxter_gazebo_ros_control_plugin.cpp.o
-.PHONY : src/baxter_gazebo_ros_control_plugin.cpp.o
+.PHONY : _action_primitive_variation_generate_messages_check_deps_PushButton
 
-src/baxter_gazebo_ros_control_plugin.i: src/baxter_gazebo_ros_control_plugin.cpp.i
+# fast build rule for target.
+_action_primitive_variation_generate_messages_check_deps_PushButton/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/build.make action_primitive_variation/CMakeFiles/_action_primitive_variation_generate_messages_check_deps_PushButton.dir/build
+.PHONY : _action_primitive_variation_generate_messages_check_deps_PushButton/fast
 
-.PHONY : src/baxter_gazebo_ros_control_plugin.i
+# Convenience name for target.
+action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule
 
-# target to preprocess a source file
-src/baxter_gazebo_ros_control_plugin.cpp.i:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/build.make action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/src/baxter_gazebo_ros_control_plugin.cpp.i
-.PHONY : src/baxter_gazebo_ros_control_plugin.cpp.i
+# Convenience name for target.
+action_primitive_variation_generate_messages_eus: action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/rule
 
-src/baxter_gazebo_ros_control_plugin.s: src/baxter_gazebo_ros_control_plugin.cpp.s
+.PHONY : action_primitive_variation_generate_messages_eus
 
-.PHONY : src/baxter_gazebo_ros_control_plugin.s
+# fast build rule for target.
+action_primitive_variation_generate_messages_eus/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_eus.dir/build
+.PHONY : action_primitive_variation_generate_messages_eus/fast
 
-# target to generate assembly for a file
-src/baxter_gazebo_ros_control_plugin.cpp.s:
-	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/build.make action_primitive_variation/CMakeFiles/baxter_gazebo_ros_control_plugin.dir/src/baxter_gazebo_ros_control_plugin.cpp.s
-.PHONY : src/baxter_gazebo_ros_control_plugin.cpp.s
+# Convenience name for target.
+action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule
+
+# Convenience name for target.
+action_primitive_variation_geneus: action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/rule
+
+.PHONY : action_primitive_variation_geneus
+
+# fast build rule for target.
+action_primitive_variation_geneus/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_geneus.dir/build
+.PHONY : action_primitive_variation_geneus/fast
+
+# Convenience name for target.
+action_primitive_variation/CMakeFiles/talker.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/talker.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/talker.dir/rule
+
+# Convenience name for target.
+talker: action_primitive_variation/CMakeFiles/talker.dir/rule
+
+.PHONY : talker
+
+# fast build rule for target.
+talker/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/talker.dir/build.make action_primitive_variation/CMakeFiles/talker.dir/build
+.PHONY : talker/fast
+
+# Convenience name for target.
+action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule
+
+# Convenience name for target.
+action_primitive_variation_genlisp: action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/rule
+
+.PHONY : action_primitive_variation_genlisp
+
+# fast build rule for target.
+action_primitive_variation_genlisp/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_genlisp.dir/build
+.PHONY : action_primitive_variation_genlisp/fast
+
+# Convenience name for target.
+action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+action_primitive_variation_generate_messages_lisp: action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/rule
+
+.PHONY : action_primitive_variation_generate_messages_lisp
+
+# fast build rule for target.
+action_primitive_variation_generate_messages_lisp/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_generate_messages_lisp.dir/build
+.PHONY : action_primitive_variation_generate_messages_lisp/fast
+
+# Convenience name for target.
+action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule:
+	cd /home/evana/apv_ws/build && $(MAKE) -f CMakeFiles/Makefile2 action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule
+.PHONY : action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule
+
+# Convenience name for target.
+action_primitive_variation_gennodejs: action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/rule
+
+.PHONY : action_primitive_variation_gennodejs
+
+# fast build rule for target.
+action_primitive_variation_gennodejs/fast:
+	cd /home/evana/apv_ws/build && $(MAKE) -f action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/build.make action_primitive_variation/CMakeFiles/action_primitive_variation_gennodejs.dir/build
+.PHONY : action_primitive_variation_gennodejs/fast
 
 src/listener.o: src/listener.cpp.o
 
@@ -822,17 +705,8 @@ help:
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... push_button_server"
-	@echo "... baxter_gazebo_ros_control_plugin"
 	@echo "... action_primitive_variation_genpy"
 	@echo "... action_primitive_variation_generate_messages_py"
-	@echo "... action_primitive_variation_gennodejs"
-	@echo "... action_primitive_variation_generate_messages_nodejs"
-	@echo "... talker"
-	@echo "... action_primitive_variation_genlisp"
-	@echo "... action_primitive_variation_generate_messages_lisp"
-	@echo "... install/strip"
-	@echo "... action_primitive_variation_geneus"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... action_primitive_variation_gencpp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
@@ -844,22 +718,22 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... action_primitive_variation_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... action_primitive_variation_generate_messages_cpp"
+	@echo "... action_primitive_variation_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... action_primitive_variation_generate_messages"
-	@echo "... action_primitive_variation_generate_messages_eus"
-	@echo "... _action_primitive_variation_generate_messages_check_deps_PushButton"
 	@echo "... push_button_client"
 	@echo "... listener"
 	@echo "... _action_primitive_variation_generate_messages_check_deps_MoveArm"
-	@echo "... src/baxter_gazebo_ros_control_plugin.o"
-	@echo "... src/baxter_gazebo_ros_control_plugin.i"
-	@echo "... src/baxter_gazebo_ros_control_plugin.s"
+	@echo "... _action_primitive_variation_generate_messages_check_deps_PushButton"
+	@echo "... action_primitive_variation_generate_messages_eus"
+	@echo "... install/strip"
+	@echo "... action_primitive_variation_geneus"
+	@echo "... talker"
+	@echo "... action_primitive_variation_genlisp"
+	@echo "... action_primitive_variation_generate_messages_lisp"
+	@echo "... action_primitive_variation_gennodejs"
 	@echo "... src/listener.o"
 	@echo "... src/listener.i"
 	@echo "... src/listener.s"
