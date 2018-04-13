@@ -1,0 +1,8 @@
+prefix=/home/evana/apv_ws/install
+
+Name: search_and_rescue_sim
+Description: Description of search_and_rescue_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/evana/apv_ws/install/lib 
+Requires: 

@@ -433,8 +433,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "baxter_simulator/baxter_gazebo/CMakeFiles/CMakeDirectoryInformation.cmake"
   "baxter_simulator/baxter_sim_kinematics/CMakeFiles/CMakeDirectoryInformation.cmake"
   "baxter_simulator/baxter_sim_hardware/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "search_and_rescue_sim/CMakeFiles/CMakeDirectoryInformation.cmake"
   "baxter_simulator/baxter_sim_examples/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "search_and_rescue_sim/CMakeFiles/CMakeDirectoryInformation.cmake"
   "non_sim_baxter_stuff/baxter_examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

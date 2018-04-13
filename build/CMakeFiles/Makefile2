@@ -6736,24 +6736,6 @@ clean: baxter_simulator/baxter_sim_hardware/CMakeFiles/baxter_emulator.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory search_and_rescue_sim
-
-# Convenience name for "all" pass in the directory.
-search_and_rescue_sim/all:
-
-.PHONY : search_and_rescue_sim/all
-
-# Convenience name for "clean" pass in the directory.
-search_and_rescue_sim/clean:
-
-.PHONY : search_and_rescue_sim/clean
-
-# Convenience name for "preinstall" pass in the directory.
-search_and_rescue_sim/preinstall:
-
-.PHONY : search_and_rescue_sim/preinstall
-
-#=============================================================================
 # Directory level rules for directory baxter_simulator/baxter_sim_examples
 
 # Convenience name for "all" pass in the directory.
@@ -6770,6 +6752,24 @@ baxter_simulator/baxter_sim_examples/clean:
 baxter_simulator/baxter_sim_examples/preinstall:
 
 .PHONY : baxter_simulator/baxter_sim_examples/preinstall
+
+#=============================================================================
+# Directory level rules for directory search_and_rescue_sim
+
+# Convenience name for "all" pass in the directory.
+search_and_rescue_sim/all:
+
+.PHONY : search_and_rescue_sim/all
+
+# Convenience name for "clean" pass in the directory.
+search_and_rescue_sim/clean:
+
+.PHONY : search_and_rescue_sim/clean
+
+# Convenience name for "preinstall" pass in the directory.
+search_and_rescue_sim/preinstall:
+
+.PHONY : search_and_rescue_sim/preinstall
 
 #=============================================================================
 # Directory level rules for directory non_sim_baxter_stuff/baxter_examples

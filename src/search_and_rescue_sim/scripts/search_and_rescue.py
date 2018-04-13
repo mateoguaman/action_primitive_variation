@@ -46,11 +46,11 @@ class SearchAndRescueWorld(object):
 
 def load_gazebo_models(table_pose=Pose(position=Point(x=1.0, y=0.0, z=0.0)),
                        table_reference_frame="world",
-                       block1_pose=Pose(position=Point(x=1.2025, y=-0.0065, z=0.7825)),
+                       block1_pose=Pose(position=Point(x=0.8025, y=-0.0065, z=0.7825)),
                        block2_pose=Pose(position=Point(x=0.6725, y=-0.2965, z=0.7825)),
                        block3_pose=Pose(position=Point(x=0.6725, y=0.1265, z=0.7825)),
                        block_reference_frame="world",
-                       grey_wall_pose=Pose(position=Point(x=1.0825, y=-0.0065, z=0.7825)),
+                       grey_wall_pose=Pose(position=Point(x=0.7025, y=-0.0065, z=0.7825)),
                        grey_wall_reference_frame="world"):
     # Get Models' Path
     model_path = rospkg.RosPack().get_path('baxter_sim_examples')+"/models/"

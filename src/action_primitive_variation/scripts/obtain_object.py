@@ -6,6 +6,8 @@ import struct
 import sys
 import copy
 
+import pyddl
+
 import rospy
 import rospkg
 
@@ -38,10 +40,16 @@ class ObtainObject(object):
         self._verbose = verbose # bool
         self._limb = baxter_interface.Limb(limb)
         self._gripper = baxter_interface.Gripper(limb)
-        ns = "ExternalTools/" + limb + "/PositionKinematicsNode/IKService"
-        self._iksvc = rospy.ServiceProxy(ns, SolvePositionIK)
+
+
+        ####################################################################################################
+        ns = "ExternalTools/" + limb + "/PositionKinematicsNode/IKService"  # Not entirely sure what this is 
+        self._iksvc = rospy.ServiceProxy(ns, SolvePositionIK)               # Not entirely sure what this is 
+        ####################################################################################################
+
         rospy.wait_for_service(ns, 5.0)
-        # verify robot is enabled
+
+        # verify robot is enabled  #########################################################################
         print("Getting robot state... ")
         self._rs = baxter_interface.RobotEnable(baxter_interface.CHECK_VERSION)
         self._init_state = self._rs.state().enabled
@@ -54,9 +62,14 @@ class ObtainObject(object):
             start_angles = dict(zip(self._joint_names, [0]*7))
         self._guarded_move_to_joint_position(start_angles)
         self.gripper_open()
-        rospy.sleep(1.0)
+        rospy.sleep(1.0)    
         print("Running. Ctrl-c to quit")
 
+
+    # Not entirely sure what this is ########################################################################
+    # I think its a request for the robot to move to a certain position
+    # Takes in a pose and outputs a valid joint solution
+    #
     def ik_request(self, pose):
         hdr = Header(stamp=rospy.Time.now(), frame_id='base')
         ikreq = SolvePositionIKRequest()
@@ -152,6 +165,28 @@ class ObtainObject(object):
         # retract to clear object
         self._retract()
 
+    #########################################################################################################
+    # Our Action Primitives #################################################################################
+    # For PDDL planning
+    def push_button(self, button_name, pose):
+        print("Pushing button")
+        self._approach(pose)
+        self._servo_to_pose(pose)
+
+    def grab_object(self, object_name, pose):
+        print("Grabbing object" + object_name)
+        self.pick(pose)
+
+
+    def move_object(self, object_name, pose):
+        print("Moving object")
+
+    def observe_scenario_state():
+        print("Observing scenario state")
+        print("Object")   # OBJECT
+        print("Button 1") # OBJECT
+        print("Button 2") # OBJECT
+        print("Wall")     # OBJECT
 
 def main():
 
@@ -159,6 +194,12 @@ def main():
 
     # Wait for the All Clear from emulator startup
     rospy.wait_for_message("/robot/sim/started", Empty)
+
+
+    # Use PDDL planner to plan for a goal 
+    #
+    #
+
 
     limb = 'left'
     hover_distance = 0.15 # meters
@@ -179,6 +220,8 @@ def main():
                              z=0.00737916180073,
                              w=0.00486450832011)
     block_poses = list()
+
+
     # The Pose of the block in its initial location.
     # You may wish to replace these poses with estimates
     # from a perception node.
@@ -194,12 +237,41 @@ def main():
     oo.move_to_start(starting_joint_angles)
     idx = 0
 
-    while not rospy.is_shutdown():
-        print("\nPicking...")
-        oo.pick(block_poses[idx])
-        print("\nPlacing...")
-        idx = (idx+1) % len(block_poses)
-        oo.place(block_poses[idx])
+
+
+    button1_pose = Pose(
+        position=Point(x=0.7, y=-0.3, z=-0.129),
+        orientation=overhead_orientation)
+    button2_pose = Pose(
+        position=Point(x=0.7, y=0.13, z=-0.129),
+        orientation=overhead_orientation)
+    object_c_pose = Pose(
+        position=Point(x=0.8, y=-0.0065, z=-0.129),
+        orientation=overhead_orientation)
+
+    
+
+    # while not rospy.is_shutdown():
+        # oo.pick(object_c_pose)
+        # print("\nPlacing...")
+        # idx = (idx+1) % len(block_poses)
+        # oo.place(block_poses[idx])
+
+    print("\nObtaining object...")
+
+    try:
+        oo.grab_object("object", object_c_pose)
+    except (rospy.ServiceException, rospy.ROSException), e:
+        rospy.logerr("Move to object failed: %s" % (e,))  
+        print("\nObtaining object FAILED")
+
+    try: 
+        oo.push_button("button1", button1_pose)
+    except (rospy.ServiceException, rospy.ROSException), e:
+        rospy.logerr("Push button failed: %s" % (e,))  
+        print("\nPush button FAILED")
+
+
     return 0
 
 if __name__ == '__main__':

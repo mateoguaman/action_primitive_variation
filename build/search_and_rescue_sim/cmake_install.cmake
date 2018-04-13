@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/evana/apv_ws/build/search_and_rescue_sim/catkin_generated/installspace/baxter_sim.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/evana/apv_ws/build/search_and_rescue_sim/catkin_generated/installspace/search_and_rescue_sim.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim/cmake" TYPE FILE FILES
-    "/home/evana/apv_ws/build/search_and_rescue_sim/catkin_generated/installspace/baxter_simConfig.cmake"
-    "/home/evana/apv_ws/build/search_and_rescue_sim/catkin_generated/installspace/baxter_simConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/search_and_rescue_sim/cmake" TYPE FILE FILES
+    "/home/evana/apv_ws/build/search_and_rescue_sim/catkin_generated/installspace/search_and_rescue_simConfig.cmake"
+    "/home/evana/apv_ws/build/search_and_rescue_sim/catkin_generated/installspace/search_and_rescue_simConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim" TYPE FILE FILES "/home/evana/apv_ws/src/search_and_rescue_sim/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/search_and_rescue_sim" TYPE FILE FILES "/home/evana/apv_ws/src/search_and_rescue_sim/package.xml")
 endif()
 
