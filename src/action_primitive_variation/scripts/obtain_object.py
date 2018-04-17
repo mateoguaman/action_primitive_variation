@@ -246,7 +246,7 @@ def main():
         position=Point(x=0.6, y=0.13, z=-0.09),
         orientation=overhead_orientation)
     object_c_pose = Pose(
-        position=Point(x=0.8, y=-0.0065, z=-0.129),
+        position=Point(x=0.8, y=-0.0085, z=-0.129),
         orientation=overhead_orientation)
 
     # block2_pose=Pose(position=Point(x=0.6925, y=-0.2965, z=0.7825)),
@@ -259,19 +259,32 @@ def main():
         # oo.place(block_poses[idx])
 
     print("\nObtaining object...")
-
     try:
         oo.grab_object("object", object_c_pose)
     except (rospy.ServiceException, rospy.ROSException), e:
         rospy.logerr("Move to object failed: %s" % (e,))  
         print("\nObtaining object FAILED")
 
+    print("\nPushing button...")
     try: 
         oo.push_button("button1", button1_pose)
     except (rospy.ServiceException, rospy.ROSException), e:
         rospy.logerr("Push button failed: %s" % (e,))  
         print("\nPush button FAILED")
 
+    print("\nRemoving obstruction...")
+    try:
+        delete_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
+        resp_delete = delete_model("grey_wall")
+    except rospy.ServiceException, e:
+        rospy.loginfo("Delete Model service call failed: {0}".format(e))
+
+    print("\nObtaining object...")
+    try:
+        oo.grab_object("object", object_c_pose)
+    except (rospy.ServiceException, rospy.ROSException), e:
+        rospy.logerr("Move to object failed: %s" % (e,))  
+        print("\nObtaining object FAILED")
 
     return 0
 
