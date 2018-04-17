@@ -240,16 +240,17 @@ def main():
 
 
     button1_pose = Pose(
-        position=Point(x=0.7, y=-0.3, z=-0.129),
+        position=Point(x=0.6, y=-0.3, z=-0.09),
         orientation=overhead_orientation)
     button2_pose = Pose(
-        position=Point(x=0.7, y=0.13, z=-0.129),
+        position=Point(x=0.6, y=0.13, z=-0.09),
         orientation=overhead_orientation)
     object_c_pose = Pose(
         position=Point(x=0.8, y=-0.0065, z=-0.129),
         orientation=overhead_orientation)
 
-    
+    # block2_pose=Pose(position=Point(x=0.6925, y=-0.2965, z=0.7825)),
+    # block3_pose=Pose(position=Point(x=0.6925, y=0.1265, z=0.7825)),
 
     # while not rospy.is_shutdown():
         # oo.pick(object_c_pose)
