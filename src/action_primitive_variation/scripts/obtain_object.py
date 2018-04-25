@@ -64,12 +64,17 @@ class ObtainObject(object):
         print("Enabling robot... ")
         self._rs.enable()
 
-    def move_to_start(self, start_angles=None):
-        print("Moving the {0} arm to start pose...".format(self._left_limb_name))
+    def move_to_start(self, limb_name, start_angles=None):
+
+        print("Moving the {0} arm to start pose...".format(limb_name))
         if not start_angles:
             start_angles = dict(zip(self._joint_names, [0]*7))
-        self._guarded_move_to_joint_position(start_angles)
-        self.gripper_open(self._left_gripper)
+        if(limb_name == "left"):
+            self._guarded_move_to_joint_position(self._left_limb, start_angles)
+            self.gripper_open(self._left_gripper)
+        else:
+            self._guarded_move_to_joint_position(self._right_limb, start_angles)
+            self.gripper_open(self._right_gripper)
         rospy.sleep(1.0)    
         print("Running. Ctrl-c to quit")
 
@@ -110,9 +115,9 @@ class ObtainObject(object):
             return False
         return limb_joints
 
-    def _guarded_move_to_joint_position(self, joint_angles):
+    def _guarded_move_to_joint_position(self, limb, joint_angles):
         if joint_angles:
-            self._left_limb.move_to_joint_positions(joint_angles)
+            limb.move_to_joint_positions(joint_angles)
         else:
             rospy.logerr("No Joint Angles provided for move_to_joint_positions. Staying put.")
 
@@ -128,16 +133,24 @@ class ObtainObject(object):
         approach = copy.deepcopy(pose)
         # approach with a pose the hover-distance above the requested pose
         approach.position.z = approach.position.z + self._hover_distance
-        joint_angles = self.ik_request(gripper, approach)
-        self._guarded_move_to_joint_position(joint_angles)
+
+        if (gripper == self._left_gripper):
+            limb = self._left_limb
+        else:
+            limb = self._right_limb
+        joint_angles = self.ik_request(limb, approach)
+        self._guarded_move_to_joint_position(limb, joint_angles)
 
 
     # Assumes LEFT gripper/limb
-    def _retract(self):
+    def _retract(self, gripper):
         # retrieve current pose from endpoint
-        current_pose = self._left_limb.endpoint_pose()
-
-
+        if (gripper == self._left_gripper):
+            limb = self._left_limb
+        else:
+            limb = self._right_limb
+        
+        current_pose = limb.endpoint_pose()
         ik_pose = Pose()
         ik_pose.position.x = current_pose['position'].x
         ik_pose.position.y = current_pose['position'].y
@@ -146,14 +159,19 @@ class ObtainObject(object):
         ik_pose.orientation.y = current_pose['orientation'].y
         ik_pose.orientation.z = current_pose['orientation'].z
         ik_pose.orientation.w = current_pose['orientation'].w
-        joint_angles = self.ik_request(self._left_limb, ik_pose)
+
+        joint_angles = self.ik_request(limb, ik_pose)
         # servo up from current pose
-        self._guarded_move_to_joint_position(joint_angles)
+        self._guarded_move_to_joint_position(limb, joint_angles)
 
     def _servo_to_pose(self, gripper, pose):
         # servo down to release
         joint_angles = self.ik_request(gripper, pose)
-        self._guarded_move_to_joint_position(joint_angles)
+        if (gripper == self._left_gripper):
+            limb = self._left_limb
+        else:
+            limb = self._right_limb
+        self._guarded_move_to_joint_position(limb, joint_angles)
 
     def pick(self, gripper, pose):
         # open the gripper
@@ -165,7 +183,7 @@ class ObtainObject(object):
         # close gripper
         self.gripper_close(gripper)
         # retract to clear object
-        self._retract()
+        self._retract(gripper)
 
     # def place(self, pose):
     #     # servo above pose
@@ -180,9 +198,9 @@ class ObtainObject(object):
     #########################################################################################################
     # Our Action Primitives #################################################################################
     # For PDDL planning
-    def push_button(self, button_name, gripper, pose):
+    def push_button(self, button_name, gripper_name, pose):
         print("Pushing button")
-        if (gripper == "right"):
+        if (gripper_name == "right"):
             self._approach(self._right_gripper, pose)
             self._servo_to_pose(self._right_gripper, pose)
         else:
@@ -221,13 +239,22 @@ def main():
 
     hover_distance = 0.15 # meters
     # Starting Joint angles for left arm
-    starting_joint_angles = {'left_w0': 0.6699952259595108,
+    starting_joint_angles_left = {'left_w0': 0.6699952259595108,
                              'left_w1': 1.030009435085784,
                              'left_w2': -0.4999997247485215,
                              'left_e0': -1.189968899785275,
                              'left_e1': 1.9400238130755056,
                              'left_s0': -0.08000397926829805,
                              'left_s1': -0.9999781166910306}
+
+    starting_joint_angles_right = {'right_w0': -0.6699952259595108,
+                             'right_w1': 1.030009435085784,
+                             'right_w2': 0.4999997247485215,
+                             'right_e0': 1.189968899785275,
+                             'right_e1': 1.9400238130755056,
+                             'right_s0': -0.08000397926829805,
+                             'right_s1': -0.9999781166910306}
+
     
     oo = ObtainObject(hover_distance)
     # An orientation for gripper fingers to be overhead and parallel to the obj
@@ -236,25 +263,26 @@ def main():
                              y=0.999649402929,
                              z=0.00737916180073,
                              w=0.00486450832011)
-    block_poses = list()
 
-
+    # block_poses = list()
     # The Pose of the block in its initial location.
     # You may wish to replace these poses with estimates
     # from a perception node.
-    block_poses.append(Pose(
-        position=Point(x=0.7, y=0.15, z=-0.129),
-        orientation=overhead_orientation))
+    # block_poses.append(Pose(
+    #     position=Point(x=0.7, y=0.15, z=-0.129),
+    #     orientation=overhead_orientation))
     # Feel free to add additional desired poses for the object.
     # Each additional pose will get its own pick and place.
-    block_poses.append(Pose(
-        position=Point(x=0.75, y=0.0, z=-0.129),
-        orientation=overhead_orientation))
+    # block_poses.append(Pose(
+    #     position=Point(x=0.75, y=0.0, z=-0.129),
+    #     orientation=overhead_orientation))
     # Move to the desired starting angles
-    oo.move_to_start(starting_joint_angles)
+
+
+    oo.move_to_start("left", starting_joint_angles_left)
+    oo.move_to_start("right", starting_joint_angles_right)
+
     idx = 0
-
-
 
     button1_pose = Pose(
         position=Point(x=0.6, y=-0.3, z=-0.09),
