@@ -86,12 +86,28 @@ class ObtainObject(object):
     def ik_request(self, gripper, pose):
         hdr = Header(stamp=rospy.Time.now(), frame_id='base')
         ikreq = SolvePositionIKRequest()
+
+        print("IK REQUEST ***************************")
         ikreq.pose_stamp.append(PoseStamped(header=hdr, pose=pose))
         try:
-            resp = self._iksvc_left(ikreq)
+            print("GRIPPER NAME: " + gripper.name)
+            if(gripper.name == "left_gripper" or gripper.name == "left"):
+                # print("IK request is going to be for LEFT GRIPPER")
+                resp = self._iksvc_left(ikreq)
+            elif (gripper.name == "right_gripper" or gripper.name == "right"):
+                # print("IK request is going to be for RIGHT GRIPPER")
+                resp = self._iksvc_right(ikreq)  
+            else:
+                print("Unable to resolve gripper for IK_REQUEST")
+                exit(1) 
         except (rospy.ServiceException, rospy.ROSException), e:
             rospy.logerr("Service call failed: %s" % (e,))
             return False
+
+        # print("IKREQ RESPONSE: ")
+        # print(resp)
+
+
         # Check if result valid, and type of seed ultimately used to get solution
         # convert rospy's string representation of uint8[]'s to int's
         resp_seeds = struct.unpack('<%dB' % len(resp.result_type), resp.result_type)
@@ -116,6 +132,9 @@ class ObtainObject(object):
         return limb_joints
 
     def _guarded_move_to_joint_position(self, limb, joint_angles):
+        print("Limb: " + limb.name)
+        print("Joint Angles: ")
+        print(joint_angles)
         if joint_angles:
             limb.move_to_joint_positions(joint_angles)
         else:
@@ -133,23 +152,27 @@ class ObtainObject(object):
         approach = copy.deepcopy(pose)
         # approach with a pose the hover-distance above the requested pose
         approach.position.z = approach.position.z + self._hover_distance
-
-        if (gripper == self._left_gripper):
+        if (gripper.name == "left_gripper"):
             limb = self._left_limb
+        elif (gripper.name == "right_gripper"):
+            limb = self._right_limb 
         else:
-            limb = self._right_limb
+            print("Unable to resolve gripper for APPROACH")
+            exit(1)
+
         joint_angles = self.ik_request(limb, approach)
         self._guarded_move_to_joint_position(limb, joint_angles)
 
-
-    # Assumes LEFT gripper/limb
     def _retract(self, gripper):
         # retrieve current pose from endpoint
-        if (gripper == self._left_gripper):
+        if (gripper.name == "left_gripper"):
             limb = self._left_limb
-        else:
+        elif (gripper.name == "right_gripper"):
             limb = self._right_limb
-        
+        else:
+            print("Unable to resolve gripper for RETRACT")
+            exit(1)
+
         current_pose = limb.endpoint_pose()
         ik_pose = Pose()
         ik_pose.position.x = current_pose['position'].x
@@ -185,45 +208,39 @@ class ObtainObject(object):
         # retract to clear object
         self._retract(gripper)
 
-    # def place(self, pose):
-    #     # servo above pose
-    #     self._approach(pose)
-    #     # servo to pose
-    #     self._servo_to_pose(pose)
-    #     # open the gripper
-    #     self.gripper_open()
-    #     # retract to clear object
-    #     self._retract()
-
     #########################################################################################################
     # Our Action Primitives #################################################################################
     # For PDDL planning
     def push_button(self, button_name, gripper_name, pose):
-        print("Pushing button")
         if (gripper_name == "right"):
             self._approach(self._right_gripper, pose)
             self._servo_to_pose(self._right_gripper, pose)
-        else:
+        elif (gripper_name == "left"):
             self._approach(self._left_gripper, pose)
             self._servo_to_pose(self._left_gripper, pose)
+        else:
+            print("Unable to resolve gripper for PUSH_BUTTON")
+            exit(1)
 
-    def grab_object(self, gripper_name, object_name, pose):
-        print("Grabbing object" + object_name)
+    def grab_object(self, object_name, gripper_name, pose):
+        print("GRIPPER NAME: " + gripper_name)
         if (gripper_name == "right"):
             self.pick(self._right_gripper, pose)
-        else:
+        elif (gripper_name == "left"):
             self.pick(self._left_gripper, pose)
+        else:
+            print("Unable to resolve gripper for GRAB_OBJECT")
+            exit(1)
 
+    # def move_object(self, object_name, pose):
+    #     print("Moving object")
 
-    def move_object(self, object_name, pose):
-        print("Moving object")
-
-    def observe_scenario_state():
-        print("Observing scenario state")
-        print("Object")   # OBJECT
-        print("Button 1") # OBJECT
-        print("Button 2") # OBJECT
-        print("Wall")     # OBJECT
+    # def observe_scenario_state():
+    #     print("Observing scenario state")
+    #     print("Object")   # OBJECT
+    #     print("Button 1") # OBJECT
+    #     print("Button 2") # OBJECT
+    #     print("Wall")     # OBJECT
 
 def main():
 
@@ -264,20 +281,6 @@ def main():
                              z=0.00737916180073,
                              w=0.00486450832011)
 
-    # block_poses = list()
-    # The Pose of the block in its initial location.
-    # You may wish to replace these poses with estimates
-    # from a perception node.
-    # block_poses.append(Pose(
-    #     position=Point(x=0.7, y=0.15, z=-0.129),
-    #     orientation=overhead_orientation))
-    # Feel free to add additional desired poses for the object.
-    # Each additional pose will get its own pick and place.
-    # block_poses.append(Pose(
-    #     position=Point(x=0.75, y=0.0, z=-0.129),
-    #     orientation=overhead_orientation))
-    # Move to the desired starting angles
-
 
     oo.move_to_start("left", starting_joint_angles_left)
     oo.move_to_start("right", starting_joint_angles_right)
@@ -294,37 +297,28 @@ def main():
         position=Point(x=0.8, y=-0.01, z=-0.129),
         orientation=overhead_orientation)
 
-    # block2_pose=Pose(position=Point(x=0.6925, y=-0.2965, z=0.7825)),
-    # block3_pose=Pose(position=Point(x=0.6925, y=0.1265, z=0.7825)),
-
-    # while not rospy.is_shutdown():
-        # oo.pick(object_c_pose)
-        # print("\nPlacing...")
-        # idx = (idx+1) % len(block_poses)
-        # oo.place(block_poses[idx])
-
-    print("\nObtaining object...")
+    print("\n************************************Obtaining object...")
     try:
         oo.grab_object("object", "left", object_c_pose)
     except (rospy.ServiceException, rospy.ROSException), e:
         rospy.logerr("Move to object failed: %s" % (e,))  
         print("\nObtaining object FAILED")
 
-    print("\nPushing button...")
+    print("\n************************************Pushing button...")
     try: 
         oo.push_button("button1", "right", button1_pose)
     except (rospy.ServiceException, rospy.ROSException), e:
         rospy.logerr("Push button failed: %s" % (e,))  
         print("\nPush button FAILED")
 
-    print("\nRemoving obstruction...")
+    print("\n************************************Removing obstruction...")
     try:
         delete_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
         resp_delete = delete_model("grey_wall")
     except rospy.ServiceException, e:
         rospy.loginfo("Delete Model service call failed: {0}".format(e))
 
-    print("\nObtaining object...")
+    print("\n************************************Obtaining object...")
     try:
         oo.grab_object("object", "left", object_c_pose)
     except (rospy.ServiceException, rospy.ROSException), e:
