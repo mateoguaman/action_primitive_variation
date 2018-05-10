@@ -11,6 +11,8 @@ import pyddl
 import rospy
 import rospkg
 
+# import robot_brain
+
 from gazebo_msgs.srv import (
     SpawnModel,
     DeleteModel,
@@ -253,6 +255,8 @@ def main():
     # Use PDDL planner to plan for a goal 
     #
     #
+
+    # robotBrain = RobotBrain()
 
     hover_distance = 0.15 # meters
     # Starting Joint angles for left arm

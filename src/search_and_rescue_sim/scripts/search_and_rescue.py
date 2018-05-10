@@ -42,6 +42,10 @@ class SearchAndRescueWorld(object):
         self._init_state = self._rs.state().enabled
         print("Enabling robot... ")
         self._rs.enable()
+        self.object_c = "N/A"
+        self.button_1 = "N/A"
+        self.button_2 = "N/A"
+        self.goal = "N/A"
 
 
 def load_gazebo_models(table_pose=Pose(position=Point(x=1.0, y=0.0, z=0.0)),
@@ -73,6 +77,7 @@ def load_gazebo_models(table_pose=Pose(position=Point(x=1.0, y=0.0, z=0.0)),
         block_xml=block_file.read().replace('\n', '')
     # Spawn Table SDF
     rospy.wait_for_service('/gazebo/spawn_sdf_model')
+
     try:
         spawn_sdf = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
         resp_sdf = spawn_sdf("cafe_table", table_xml, "/",
@@ -88,6 +93,8 @@ def load_gazebo_models(table_pose=Pose(position=Point(x=1.0, y=0.0, z=0.0)),
         rospy.logerr("Spawn SDF service call failed: {0}".format(e))
     # Spawn Block URDF
     rospy.wait_for_service('/gazebo/spawn_urdf_model')
+    
+
     try:
         spawn_urdf = rospy.ServiceProxy('/gazebo/spawn_urdf_model', SpawnModel)
         resp_urdf = spawn_urdf("block1", block_xml, "/",
@@ -95,6 +102,8 @@ def load_gazebo_models(table_pose=Pose(position=Point(x=1.0, y=0.0, z=0.0)),
     except rospy.ServiceException, e:
         rospy.logerr("Spawn URDF service call failed: {0}".format(e))
     rospy.wait_for_service('/gazebo/spawn_urdf_model')
+    object_c = block1_pose
+
     try:
         spawn_urdf = rospy.ServiceProxy('/gazebo/spawn_urdf_model', SpawnModel)
         resp_urdf = spawn_urdf("block2", block_xml, "/",
@@ -102,12 +111,17 @@ def load_gazebo_models(table_pose=Pose(position=Point(x=1.0, y=0.0, z=0.0)),
     except rospy.ServiceException, e:
         rospy.logerr("Spawn URDF service call failed: {0}".format(e))
     rospy.wait_for_service('/gazebo/spawn_urdf_model')
+    button_1 = block2_pose
+
     try:
         spawn_urdf = rospy.ServiceProxy('/gazebo/spawn_urdf_model', SpawnModel)
         resp_urdf = spawn_urdf("block3", block_xml, "/",
                                block3_pose, block_reference_frame)
     except rospy.ServiceException, e:
         rospy.logerr("Spawn URDF service call failed: {0}".format(e))
+    button_2 = block2_pose
+
+
 def delete_gazebo_models():
     # This will be called on ROS Exit, deleting Gazebo models
     # Do not wait for the Gazebo Delete Model service, since
@@ -124,16 +138,37 @@ def main():
 
     rospy.init_node("search_and_rescue")
     load_gazebo_models()
-    
-    # Remove models from the scene on shutdown
-    # rospy.on_shutdown(delete_gazebo_models)
-
-    # Wait for the All Clear from emulator startup
     rospy.wait_for_message("/robot/sim/started", Empty)    
+
+    pub_obj_c = rospy.Publisher('object_c', Pose, queue_size=10)
+    pub_button_1 = rospy.Publisher('button_1', Pose, queue_size=10)
+    pub_button_2 = rospy.Publisher('button_2', Pose, queue_size=10)
+
+    # obj_info = object_c
+    # button_1_info = button_1
+    # button_2_info = button_2
 
     # while not rospy.is_shutdown():
     #     print("\Search-and-rescue mission in action")
+
     return 0
+
+####################################################################################
+    # pub = rospy.Publisher('chatter', String, queue_size=10)
+    # rospy.init_node('scenario', anonymous=True)
+    # rate = rospy.Rate(10) # 10hz
+
+    # while not rospy.is_shutdown():
+
+    #     button_1_state = "not pressed" # BUTTON.get_state()
+    #     button_2_state = "pressed" # BUTTON.get_state()
+    #     object_c_location = "x y z" # BUTTON.get_location()
+
+    #     state_info = "BUTTON 1: " + button_1_state + ", BUTTON 2: " + button_2_state + ", OBJECT: " + object_c_location
+
+    #     rospy.loginfo(state_info)
+    #     pub.publish(state_info)
+        # rate.sleep() # Every time a state chagne message is pubished from the ObtainObject
 
 if __name__ == '__main__':
     sys.exit(main())
