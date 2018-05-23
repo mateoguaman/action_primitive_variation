@@ -35,29 +35,36 @@ import baxter_interface
 
 from gazebo_msgs.msg import LinkStates
 
-##################################################
-################### STATE INFO ###################
+#################################################
+################### STATE INFO ##################
 class ScenarioElement(object):
     def __init__(self, _name):
-        self.name = _name # string
-        self. location = 0
-        self.state = "N/A"
+        self.name = _name # String
+        self.location = Point()
+        self.pressed = False
 
     def setLocation(self, _location):
         self.location = _location
 
-    def setState(self, _state):
-        self.state = _state
+    def setPressed(self, state_value):
+        self.pressed = state_value
 
     def print_data(self):
         print("Name: ")
         print(self.name)
         print("Location: ")
         print(self.location)
-        print("State: ")
-        print(self.state)
-##################################################
-##################################################
+        print("Pressed: ")
+        print(self.pressed)
+
+    def getLocation(self):
+        return self.location
+
+    def getPressed(self):
+        return self.pressed 
+
+#################################################
+#################################################
 
 class RobotBrain(object):
     def __init__(self):
@@ -72,7 +79,6 @@ class RobotBrain(object):
         #                 'baxter::left_upper_forearm', 
         #                 'baxter::left_lower_forearm', 
         #                 'baxter::left_wrist', 
-
         #                 'baxter::l_gripper_l_finger', 
         #                 'baxter::l_gripper_r_finger', 
         #                 'baxter::right_upper_shoulder', 
@@ -83,7 +89,6 @@ class RobotBrain(object):
         #                 'baxter::right_lower_forearm', 
         #                 'baxter::right_wrist', 
         #                 'baxter::r_gripper_l_finger', 
-
         #                 'baxter::r_gripper_r_finger', 
         #                 'cafe_table::link', 
         #                 'grey_wall::link', 
@@ -98,7 +103,6 @@ class RobotBrain(object):
         # self.cafe_table_location = 0
         # self.r_gripper_location = 0
         # self.l_gripper_location  = 0
-
         # self.left_button_pressed = False
         # self.right_button_pressed = False
 
@@ -130,6 +134,7 @@ class RobotBrain(object):
 
         # if(self.left_button_pressed):
         #     print("Left Button Pressed")
+
         # if(self.right_button_pressed):
         #     print("Right Button Pressed")
 
@@ -155,57 +160,101 @@ class RobotBrain(object):
         # print(self.l_gripper_location)
 
     def evaluate_discrete_data(self):
-        if(abs(self.l_gripper_location.x - self.left_button_location.x) < 0.01):
-            self.left_button_pressed = True
-        if(abs(self.r_gripper_location.x - self.left_button_location.x) < 0.01):
-            self.left_button_pressed = True
-        if(abs(self.l_gripper_location.x - self.right_button_location.x) < 0.01):
-            self.right_button_pressed = True
-        if(abs(self.r_gripper_location.x - self.right_button_location.x) < 0.01):
-            self.right_button_pressed = True
-
+        if(self.is_button_pressed(self.l_gripper, self.left_button)):
+            self.left_button.setPressed(True)
+            print("Left Button Pressed: ")
+            print(self.left_button.getPressed())
+        else:
+            self.left_button.setPressed(False)
+        if(self.is_button_pressed(self.r_gripper, self.left_button)):
+            self.left_button.setPressed(True)
+            print("Left Button Pressed: ")
+            print(self.left_button.getPressed())
+        else:
+            self.left_button.setPressed(False)
+        if(self.is_button_pressed(self.l_gripper, self.right_button)):
+            self.right_button.setPressed(True)
+            print("Right Button Pressed: ")
+            print(self.right_button.getPressed())
+        else:
+            self.right_button.setPressed(False)
+        if(self.is_button_pressed(self.r_gripper, self.right_button)):
+            self.right_button.setPressed(True)
+            print("Right Button Pressed: ")
+            print(self.right_button.getPressed())
+        else:
+            self.right_button.setPressed(False)
     # def update(self, data):
 
+    def is_button_pressed(self, gripper, button):
+        if((abs(gripper.getLocation().x - button.getLocation().x) < 0.01)
+            and (abs(gripper.getLocation().y - button.getLocation().y) < 0.01)
+            and (abs(gripper.getLocation().z - button.getLocation().z) < 0.01)):
+            return True
+        return False
 
-    def callback(self, data):
-        
+    def set_locations(self, data):
         names = data.name
         poses = data.pose
 
-        left_button_index = len(data.name) - 1
-        right_button_index = left_button_index -1
-        object_index = right_button_index - 1 
-        grey_wall_index = object_index -1 
-        cafe_table_index = grey_wall_index - 1 
-        l_gripper_index = cafe_table_index - 1 
-        r_gripper_index = l_gripper_index - 10
+        try:
+            left_button_index = data.name.index("block3::block")
+            self.left_button.setLocation(poses[left_button_index].position)
+        except:
+            left_button_index = -1
+            # print("value error for left button index")
+            
+        try:
+            right_button_index = data.name.index("block2::block")
+            self.right_button.setLocation(poses[right_button_index].position)
+        except:
+            right_button_index = -1
+            # print("value error for right button index")
 
-        # self.left_button_location = poses[left_button_index].position
-        # self.right_button_location = poses[right_button_index].position
-        # self.object_location = poses[object_index].position
-        # self.grey_wall_location = poses[grey_wall_index].position
-        # self.cafe_table_location = poses[cafe_table_index].position
-        # self.r_gripper_location = poses[r_gripper_index].position
-        # self.l_gripper_location =  poses[l_gripper_index].position
-        self.left_button.setLocation(poses[left_button_index].position)
-        self.right_button.setLocation(poses[right_button_index].position)
-        self.object.setLocation(poses[object_index].position)
-        self.grey_wall.setLocation(poses[grey_wall_index].position)
-        self.cafe_table.setLocation(poses[cafe_table_index].position)
-        self.r_gripper.setLocation(poses[r_gripper_index].position)
-        self.l_gripper.setLocation(poses[l_gripper_index].position)
+        try:
+            object_index = data.name.index("block1::block")
+            self.object.setLocation(poses[object_index].position)
+        except:
+            object_index = -1
+            # print("value error for object index")
 
-        # self.observe_state()
-        self.print_data()
+        try:
+            grey_wall_index = data.name.index("grey_wall::link")
+            self.grey_wall.setLocation(poses[grey_wall_index].position)
+        except:
+            grey_wall_index = -1
+            # print("value error for grey wall index")
+
+        try:
+            cafe_table_index = data.name.index("cafe_table::link")
+            self.cafe_table.setLocation(poses[cafe_table_index].position)
+        except:
+            cafe_table_index = -1
+            # print("value error for cafe table index")
+
+        try:
+            r_gripper_index = data.name.index("baxter::r_gripper_r_finger")
+            self.r_gripper.setLocation(poses[r_gripper_index].position)
+        except:
+            r_gripper_index = -1
+            # print("value error for left gripper index")
+
+        try:
+            l_gripper_index = data.name.index("baxter::l_gripper_l_finger")
+            self.l_gripper.setLocation(poses[l_gripper_index].position)
+        except:
+            l_gripper_index = -1
+            # print("value error for right gripper index")
+
+    def callback(self, data):
+        self.set_locations(data)
+        self.observe_state()
+        # self.print_data()
 
     def brain(self):
         rospy.init_node("robot_brain", anonymous=True)
         sub = rospy.Subscriber("gazebo/link_states", LinkStates, self.callback)
-
-        # brain = RobotBrain()
-        rospy.spin() #simply keeps python from exiting until this node is stopped
-        # while not rospy.is_shutdown():
-        #     rospy.spin()
+        rospy.spin() 
 
 if __name__ == '__main__':
     brain = RobotBrain()

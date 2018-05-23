@@ -19,7 +19,6 @@ class Scenario(object):
         print("Callback function invoked in scenario data")
         self.pub.publish("Five")
         # print(data)
-
         # if(data):
         #     pub_data = "True"
 

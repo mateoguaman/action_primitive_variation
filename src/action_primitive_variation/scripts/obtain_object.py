@@ -6,7 +6,8 @@ import struct
 import sys
 import copy
 
-import pyddl
+from pyddl import Action
+from pyddl import neg
 
 import rospy
 import rospkg
@@ -305,7 +306,7 @@ def main():
     try:
         oo.grab_object("object", "left", object_c_pose)
     except (rospy.ServiceException, rospy.ROSException), e:
-        rospy.logerr("Move to object failed: %s" % (e,))  
+        rospy.logerr("Move to object failed: %s" % (e,))
         print("\nObtaining object FAILED")
 
     print("\n************************************Pushing button...")
@@ -330,6 +331,59 @@ def main():
         print("\nObtaining object FAILED")
 
     return 0
+
+#######################################################################################
+################################## Actions and stuff ##################################
+#######################################################################################
+
+
+
+grabObject = Action(
+    'grab_object',
+    parameters=(
+        ('object_name', 'obj_c'),
+        ('gripper_name', 'gripper'),
+        ('object_position', 'o_x'),
+        ('object_position', 'o_y'),
+        ('object_position', 'o_z'),
+        ('gripper_position', 'g_x'),
+        ('gripper_position', 'g_y'),
+        ('gripper_position', 'g_z'),
+    ),
+    preconditions=(
+        ('at', 'obj_c', 'o_x', 'o_y', 'o_z'),
+        ('at', 'gripper', 'g_x', 'g_y', 'g_z'),
+    ),
+    effects=(
+        neg(('at', 'gripper', 'g_x', 'g_y', 'g_z')),
+        ('at', 'gripper', 'o_x', 'o_y', 'o_z'),
+    ),
+)
+
+pushButton = Action(
+    'push_button',
+    parameters=(
+        ('button_name', 'button_1'),
+        ('gripper_name', 'gripper'),
+        ('button_position', 'b_x'),
+        ('button_position', 'b_y'),
+        ('button_position', 'b_z'),
+        ('gripper_position', 'g_x'),
+        ('gripper_position', 'g_y'),
+        ('gripper_position', 'g_z'),
+    ),
+    preconditions=(
+        ('at', 'button_1', 'b_x', 'b_y', 'b_z'),
+        ('at', 'gripper', 'g_x', 'g_y', 'g_z'),
+    ),
+    effects=(
+        neg(('at', 'gripper', 'g_x', 'g_y', 'g_z')),
+        ('at', 'gripper', 'o_x', 'o_y', 'o_z'),
+    ),
+)
+
+# Need to figure out what the predicates are. Right now it looks like 
+# there is 
 
 if __name__ == '__main__':
     sys.exit(main())
