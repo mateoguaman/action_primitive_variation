@@ -9,27 +9,6 @@ We would also like it to be the case that once the agent discovers the new actio
 
 2. System Design
 
- ________________
-|				 |  
-|   Robot Brain	 |
-|________________|
-
- ____________________
-|					 |  
-|   Scenario         |
-|   Representation	 |
-|____________________|
-
- ____________
-|			 |  
-|   Gazebo	 |
-|____________|
-
- ____________
-|			 |  
-|   PDDL	 |
-|____________|
-
 a. Robot Brain
 The main module of the system will be the robot brain. This module will be where everything stems, but it itself wont contain much. The robot brain will have the ability to decide on a goal, and feed it to the PDDL planning module. For now, all goals of the robot, no matter how small, will go through the PDDL planner. For example, even if the robot wants to execute a very small action (say, a simple primitive like, move arm), it will go through the planner. Eventually, we may bipass this step, but for now, we will keep it simple. 
 The robot brain will also have a knowledge base (KB), which will contain the knowledge that the robot has about itself. For now, the only thing that the knowledge base will contain is a list of available action primitives. Within our application/proof of concept, we will be adding to this list upon discovering new primitives. In future applications, we may chose to add to the KB with other lists of known capabilities besides primitives. 
